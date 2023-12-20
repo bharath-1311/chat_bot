@@ -30,7 +30,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/chat_bot7'
-  - '${CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1$SHORT_SHA''
+  - '${CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1$SHORT_SHA'
   - '--namespace=default'
 
 images:
