@@ -17,7 +17,7 @@ args:
 - 'set'
 - 'image'
 - 'deployment/chat\_bot7'
-- '</span>{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
+- '{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
   - '--namespace=default'
 images:
 - 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
