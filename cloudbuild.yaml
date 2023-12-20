@@ -1,5 +1,5 @@
 # Configure project and GKE cluster information
-steps:
+#steps:
   # - name: 'gcr.io/cloud-builders/gcloud'
   #   substitutions:
   #     CLOUDSDK_COMPUTE_REGION: "us-central1"
