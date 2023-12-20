@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   env:
     CLOUDSDK_COMPUTE_REGION: "us-central1"
-    CLOUDSDK_COMPUTE_ZONE: "us-central1-a" # Replace with your actual zone
+    CLOUDSDK_COMPUTE_ZONE: "us-central1-a"  # Replace with your actual zone
     CLOUDSDK_CONTAINER_CLUSTER: "chatbot"
   args: ['config', 'set', 'project', 'lumen-b-ctl-047']
 # Step 1: Build the Docker image
@@ -11,13 +11,13 @@ steps:
 # Step 2: Push the Docker image to Google Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION']
-\# Step 3\: Deploy the Docker container to Google Kubernetes Engine \(GKE\)
-\- name\: 'gcr\.io/cloud\-builders/kubectl'
-args:
-- 'set'
-- 'image'
-- 'deployment/chat\_bot7'
-- '{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
+# Step 3: Deploy the Docker container to Google Kubernetes Engine (GKE)
+- name: 'gcr.io/cloud-builders/kubectl'
+  args:
+  - 'set'
+  - 'image'
+  - 'deployment/chat_bot7'
+  - 'chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
   - '--namespace=default'
 images:
 - 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
