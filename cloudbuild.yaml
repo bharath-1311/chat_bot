@@ -5,11 +5,9 @@ steps:
     CLOUDSDK_COMPUTE_ZONE: "us-central1-a" # Replace with your actual zone
     CLOUDSDK_CONTAINER_CLUSTER: "chatbot"
   args: ['config', 'set', 'project', 'lumen-b-ctl-047']
-
 # Step 1: Build the Docker image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION', '.']
-
 # Step 2: Push the Docker image to Google Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/lumen-b-ctl-047/chat_bot1:<span class="math-inline">GOOGLE\_CLOUD\_BUILD\_REVISION'\]
@@ -21,6 +19,5 @@ args\:
 \- 'deployment/chat\_bot7'
 \- '</span>{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
   - '--namespace=default'
-
 images:
 - 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
