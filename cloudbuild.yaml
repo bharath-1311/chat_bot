@@ -30,7 +30,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/chat_bot7'
-  - '$chatbot/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bo1t$SHORT_SHA'
+  - '$chatbot/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1$SHORT_SHA'
   - '--namespace=default'
 
 images:
