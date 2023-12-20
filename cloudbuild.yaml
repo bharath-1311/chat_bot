@@ -9,7 +9,7 @@ steps:
 
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  substitutions:
+  env:
     CLOUDSDK_COMPUTE_REGION: "us-central1"
     CLOUDSDK_COMPUTE_ZONE: "us-central1-a" # Replace with your actual zone
     CLOUDSDK_CONTAINER_CLUSTER: "chatbot"
