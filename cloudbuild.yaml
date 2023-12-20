@@ -13,11 +13,11 @@ steps:
   args: ['push', 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION']
 \# Step 3\: Deploy the Docker container to Google Kubernetes Engine \(GKE\)
 \- name\: 'gcr\.io/cloud\-builders/kubectl'
-args\:
-\- 'set'
-\- 'image'
-\- 'deployment/chat\_bot7'
-\- '</span>{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
+args:
+- 'set'
+- 'image'
+- 'deployment/chat\_bot7'
+- '</span>{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
   - '--namespace=default'
 images:
 - 'gcr.io/lumen-b-ctl-047/chat_bot1:$GOOGLE_CLOUD_BUILD_REVISION'
