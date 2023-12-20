@@ -1,14 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  env:
-    - 'CLOUDSDK_COMPUTE_REGION=us-central1'
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'  # Replace with your actual zone
-    - 'CLOUDSDK_CONTAINER_CLUSTER=chatbot'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
       gcloud config set project lumen-b-ctl-047
+      gcloud config set compute/region us-central1
+      gcloud config set compute/zone us-central1-a
+      gcloud config set container/cluster chatbot
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
