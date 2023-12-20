@@ -25,7 +25,6 @@ steps:
 \- \# Option 2\: Use environment variable for cluster name
 \- \# \`</span>{CLOUDSDK_CONTAINER_CLUSTER}/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bot1:$SHORT_SHA`
   - '--namespace=default'
-
 images:
 - 'gcr.io/lumen-b-ctl-047/chat_bot1:$SHORT_SHA'
 
