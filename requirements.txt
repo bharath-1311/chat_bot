@@ -1,6 +1,10 @@
-openai==0.28
-pickle
+#openai==0.28
+#pickle
+#langchain
+#pinecone-client
+#json
+#tiktoken
 langchain
-pinecone-client
-json
-tiktoken
+pypdf
+#pinecone
+# Add other dependencies as needed
