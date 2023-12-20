@@ -8,13 +8,18 @@ steps:
 #   args: ['push', 'gcr.io/lumen-b-ctl-047/chat_bot:$SHORT_SHA']
 
 # Step 3: Deploy the Docker container to Google Kubernetes Engine (GKE)
-- name: 'gcr.io/cloud-builders/kubectl'
-  args:
-  - 'set'
-  - 'image'
-  - 'deployment/chat_bot'
-  - 'your-container-name=gcr.io/lumen-b-ctl-047/chat_bot$SHORT_SHA'
-  - '--namespace=default'
+# - name: 'gcr.io/cloud-builders/kubectl'
+#   args:
+#   - 'set'
+#   - 'image'
+#   - 'deployment/chat_bot'
+#   - 'your-container-name=gcr.io/lumen-b-ctl-047/chat_bot$SHORT_SHA'
+#   - '--namespace=default'
 
-images:
-- 'gcr.io/lumen-b-ctl-047/chat_bot:$SHORT_SHA'
+# images:
+# - 'gcr.io/lumen-b-ctl-047/chat_bot:$SHORT_SHA'
+
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  script: |
+    gcloud run deploy cloudrunservice --image us-docker.pkg.dev/cloudrun/container/chat_bot --region us-central1 --platform managed --allow-unauthenticated
