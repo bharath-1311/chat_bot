@@ -11,7 +11,7 @@ steps:
 # Step 2: Push the Docker image to Google Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/lumen-b-ctl-047/chat_bot1:<span class="math-inline">GOOGLE\_CLOUD\_BUILD\_REVISION'\]
-\#Step 3\: Deploy the Docker container to Google Kubernetes Engine \(GKE\)
+\# Step 3\: Deploy the Docker container to Google Kubernetes Engine \(GKE\)
 \- name\: 'gcr\.io/cloud\-builders/kubectl'
 args\:
 \- 'set'
