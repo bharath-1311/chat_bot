@@ -1,4 +1,12 @@
 steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+    substitutions:
+      CLOUDSDK_COMPUTE_REGION: "us-central1"
+      CLOUDSDK_COMPUTE_ZONE: "us-central1-a" # Replace with your actual zone
+      CLOUDSDK_CONTAINER_CLUSTER: "chatbot"
+    args: ['config', 'set', 'project', 'lumen-b-ctl-047']
+
+
 # Step 1: Build the Docker image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/lumen-b-ctl-047/chat_bot1:$SHORT_SHA', '.']
@@ -13,7 +21,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/chat_bot7'
-  - 'your-container-name=gcr.io/lumen-b-ctl-047/chat_bo1t$SHORT_SHA'
+  - '$chatbot/chat_bot1=gcr.io/lumen-b-ctl-047/chat_bo1t$SHORT_SHA'
   - '--namespace=default'
 
 images:
