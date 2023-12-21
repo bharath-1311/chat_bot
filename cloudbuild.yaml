@@ -21,23 +21,23 @@ steps:
     - 'push'
     - 'gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
 
- - name: 'gcr.io/cloud-builders/gke-deploy'
-    id: 'Prepare deploy'
-    args:
-      - 'prepare'
-      - '--image=gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
-      - '--app=chat-bot7'
-      - '--namespace=default'
-      - '--output=output'
- 
-  - name: 'gcr.io/cloud-builders/gke-deploy'
-    id: 'Apply deploy'
-    args:
-      - 'apply'
-      - '--filename=deployment.yaml'
-      - '--namespace=default'
-      - '--cluster=chatbot'
-      - '--location=us-central1-a'   
+- name: 'gcr.io/cloud-builders/gke-deploy'
+  id: 'Prepare deploy'
+  args:
+    - 'prepare'
+    - '--image=gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
+    - '--app=chat-bot7'
+    - '--namespace=default'
+    - '--output=output'
+
+- name: 'gcr.io/cloud-builders/gke-deploy'
+  id: 'Apply deploy'
+  args:
+    - 'apply'
+    - '--filename=deployment.yaml'
+    - '--namespace=default'
+    - '--cluster=chatbot'
+    - '--location=us-central1-a'
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
