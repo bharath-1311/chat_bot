@@ -37,7 +37,7 @@ steps:
     - '--filename=deployment.yaml'
     - '--namespace=default'
     - '--cluster=chatbot'
-    - '--location=us-central1-a'
+    - '--location=us-central1'
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
