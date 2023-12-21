@@ -13,21 +13,21 @@ steps:
   args:
     - 'build'
     - '-t'
-    - 'gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee'
+    - 'gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
     - '.'
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'push'
-    - 'gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee'
+    - 'gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
     - 'set'
     - 'image'
     - 'deployment/chat-bot7'
-    - 'chat-bot1=gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee'
+    - 'chat-bot1=gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
     - '--namespace=default'
 
 images:
-- 'gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee'
+- 'gcr.io/lumen-b-ctl-047/chat-bot1:21cc9ee'
