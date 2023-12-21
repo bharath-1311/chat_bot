@@ -11,5 +11,5 @@
 openai==0.28
 langchain
 pypdf
-
+pinecone
 
