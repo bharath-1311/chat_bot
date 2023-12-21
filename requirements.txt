@@ -6,5 +6,5 @@ openai==0.28
 #tiktoken
 langchain
 pypdf
-#pinecone
+pinecone
 # Add other dependencies as needed
