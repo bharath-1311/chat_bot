@@ -4,12 +4,12 @@ RUN python3 -m pip install --upgrade pip
 COPY . .
 #RUN python3 -m pip install pinecone
 RUN python3 -m pip install -r requirements.txt
-RUN mkdir /pinecone && \
+#RUN mkdir /pinecone && \
     wget -O /pinecone/pinecone.tar.gz https://github.com/pinecone-io/pinecone-python/archive/main.tar.gz && \
     tar -xzvf /pinecone/pinecone.tar.gz -C /pinecone --strip-components=1
 
 # Install Pinecone from the downloaded source
-RUN cd /pinecone && \
+#RUN cd /pinecone && \
     python3 -m pip install .
 
 
