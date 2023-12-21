@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: chat_bot5
-        image: "
+        image: "gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee"
         ports:
         - containerPort: 9001
