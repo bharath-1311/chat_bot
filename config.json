@@ -1,0 +1,13 @@
+{
+    "embedding" :
+    {
+        "huggingface":"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",
+        "openai":"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"
+    },
+    "vectordb":
+    {
+        "pinecone_key": "be52745c-1824-43de-a7a1-8eda03346053",
+        "pinecone_env":"us-west4-gcp",
+        "pinecone_index":"test"
+    }
+}
