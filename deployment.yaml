@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat_bot7
+  labels:
+    app: chat_bot7
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chat_bot7
+  template:
+    metadata:
+      labels:
+        app: chat_bot7
+    spec:
+      containers:
+      - name: chat_bot5
+        image: "
+        ports:
+        - containerPort: 9001
