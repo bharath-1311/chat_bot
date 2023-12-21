@@ -1,10 +1,15 @@
-openai==0.28
+#openai==0.28
 #pickle
 #langchain
 #pinecone-client
 #json
 #tiktoken
+#langchain
+#pypdf
+#pinecone
+# Add other dependencies as needed
+openai==0.28
 langchain
 pypdf
-pinecone
-# Add other dependencies as needed
+git+https://github.com/pinecone-io/pinecone-python.git@main#egg=pinecone
+
