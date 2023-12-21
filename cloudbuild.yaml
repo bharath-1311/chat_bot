@@ -25,7 +25,7 @@ steps:
   args:
     - 'set'
     - 'image'
-    - 'deployment/chat_bot7'
+    - 'deployment/chat-bot7'
     - 'chat_bot5=gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee'
     - '--namespace=default'
 
