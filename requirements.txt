@@ -11,5 +11,5 @@
 openai==0.28
 langchain
 pypdf
-git+https://github.com/pinecone-io/pinecone-python.git@main#egg=pinecone
+
 
