@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chat_bot7
+  name: chat-bot7
   labels:
-    app: chat_bot7
+    app: chat-bot7
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: chat_bot7
+      app: chat-bot7
   template:
     metadata:
       labels:
-        app: chat_bot7
+        app: chat-bot7
     spec:
       containers:
-      - name: chat_bot5
+      - name: chat_bot1
         image: "gcr.io/lumen-b-ctl-047/chat_bot1:21cc9ee"
         ports:
         - containerPort: 9001
