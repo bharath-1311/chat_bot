@@ -2,7 +2,7 @@ openai==0.28
 #pickle
 #langchain
 #pinecone-client
-json
+#json
 #tiktoken
 langchain
 pypdf
